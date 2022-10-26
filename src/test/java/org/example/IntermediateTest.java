@@ -31,6 +31,4 @@ public class IntermediateTest {
         String result = Intermediate.convertNum(i);
         assertEquals(expected,result);
     }
-
-
 }

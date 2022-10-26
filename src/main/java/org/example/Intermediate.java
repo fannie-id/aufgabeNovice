@@ -20,7 +20,6 @@ public class Intermediate {
         return zahlenwortArray()[zahl-1];
     }
 
-
     //Schreibe ein Programm das die Zahlen 1-100 ausgibt, aber:
     //Vor Zahlen die durch 3 teilbar sind (modulo) soll ein # stehen
     //Vor Zahlen die durch 5 teilbar sind soll ein $ stehen
