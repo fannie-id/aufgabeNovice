@@ -8,10 +8,11 @@ public class Expert {
         String text ="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
                 "sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, " +
                 "sed diam voluptua.";
-        reversEingabe();
+        System.out.println(reversEingabe());
         seperateText(text);
         crossSum2(549493);
         romaZahl(78);
+        sortArray();
     }
 
     //Schreibe eine Methode die einen Eingabestring rückwärts ausgibt.
@@ -24,7 +25,6 @@ public class Expert {
 
             sb.append(eingabe.charAt(i));
         }
-        System.out.println(sb);
         return sb.toString();
     }
 
@@ -38,8 +38,8 @@ public class Expert {
     //Schreibe eine Methode die einen String nach , separiert und als Array zurück gibt.
     public static String[] seperateText(String text){
         String[] res = text.split(", ");
-        for (int i = 0; i < res.length; i++) {
-            System.out.println(res[i]);
+        for (String str: res) {
+            System.out.println(str);
         }
         return res;
     }
@@ -52,8 +52,8 @@ public class Expert {
         int res = 0;
         for (int i = 0; i < len; i++) {
             res = num%10;
-            sum = sum+res;
-            num =num/10;
+            sum += res;
+            num /= 10;
         }
         return sum;
     }
@@ -67,7 +67,7 @@ public class Expert {
             int c = n.charAt(i);
             System.out.println(c);
 
-            sum = sum+c-48;
+            sum += c-48;
         }
         System.out.println(sum);
         return sum;
