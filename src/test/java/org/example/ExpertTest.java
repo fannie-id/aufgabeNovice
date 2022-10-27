@@ -3,21 +3,11 @@ package org.example;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ExpertTest {
-    /*@Test
-    void qwert_output_trewq(){
-        String str ="qwert";
-        String expected = "trewq";
-        String result = Expert.reversEingabe(str);
-        assertEquals(expected, result);
-    }*/
-
 
     @Test
     void qwert_output_trewq(){
@@ -26,15 +16,10 @@ public class ExpertTest {
         ByteArrayInputStream in = new ByteArrayInputStream(str.getBytes());
         System.setIn(in);
 
+        String result = Expert.reversEingabe();
 
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        PrintStream originalOut = System.out;
-
-        System.setOut(new PrintStream(outContent));
-
-        Expert.reversEingabe();
-        assertEquals("bitte gebe was ein\ntrewq\n", outContent.toString());
-        System.setOut(originalOut);
+        String expected = "trewq";
+        assertEquals(expected, result);
         System.setIn(sysInBackup);
     }
 
