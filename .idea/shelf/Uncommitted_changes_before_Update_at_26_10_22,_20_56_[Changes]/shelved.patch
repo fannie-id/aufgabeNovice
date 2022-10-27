@@ -1,0 +1,221 @@
+Index: src/test/java/org/example/IntermediateTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/example/IntermediateTest.java b/src/test/java/org/example/IntermediateTest.java
+new file mode 100644
+--- /dev/null	(date 1666807197695)
++++ b/src/test/java/org/example/IntermediateTest.java	(date 1666807197695)
+@@ -0,0 +1,24 @@
++package org.example;
++
++import org.junit.jupiter.api.Test;
++
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class IntermediateTest {
++    @Test
++    void test_arr_correct(){
++        String[] expected = {"eins","zwei","drei","vier","fünf","sechs","sieben","acht","neun","zehn"};
++        String[] result = Intermediate.zahlenwortArray();
++        assertEquals(expected,result);
++    }
++
++    @Test
++    void when_2_output_zwei(){
++        int n = 2;
++        String expected = "zwei";
++        String result = Intermediate.zahlenWort(n);
++        assertEquals(expected,result);
++    }
++
++
++}
+Index: src/main/java/org/example/Expert.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Expert.java b/src/main/java/org/example/Expert.java
+new file mode 100644
+--- /dev/null	(date 1666808042867)
++++ b/src/main/java/org/example/Expert.java	(date 1666808042867)
+@@ -0,0 +1,25 @@
++package org.example;
++
++import java.util.Scanner;
++
++public class Expert {
++    public static void main(String[] args) {
++        reversEingabe();
++
++    }
++
++    //Schreibe eine Methode die einen Eingabestring rückwärts ausgibt.
++    public static String reversEingabe(){
++        Scanner sc = new Scanner(System.in);
++        System.out.println("bitte gebe was ein");
++        String eingabe = sc.next();
++        StringBuilder sb = new StringBuilder();
++        for (int i = eingabe.length()-1; i >=0; i--) {
++
++            sb.append(eingabe.charAt(i));
++        }
++        System.out.println(sb.toString());
++        return sb.toString();
++
++    }
++}
+Index: src/test/java/org/example/ExpertTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/example/ExpertTest.java b/src/test/java/org/example/ExpertTest.java
+new file mode 100644
+--- /dev/null	(date 1666808823195)
++++ b/src/test/java/org/example/ExpertTest.java	(date 1666808823195)
+@@ -0,0 +1,15 @@
++package org.example;
++
++import org.junit.jupiter.api.Test;
++
++import static org.junit.jupiter.api.Assertions.assertEquals;
++
++public class ExpertTest {
++    /*@Test
++    void qwert_output_trewq(){
++        String str ="qwert";
++        String expected = "trewq";
++        String result = Expert.reversEingabe(str);
++        assertEquals(expected, result);
++    }*/
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8e1105f1-41fc-4d5e-9b66-c9fb6edb21f4\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Expert.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Intermediate.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Novice.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/org/example/ExpertTest.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/org/example/IntermediateTest.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/org/example/NoviceTest.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JUnit5 Test Class\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2Gg37EY0a97qvgw4EwV2Q6I9ldr\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary\": \"JUnit5\",\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5\": \"\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateTestDialog.Recents.Supers\">\n      <recent name=\"\" />\n    </key>\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\n      <recent name=\"org.example\" />\n    </key>\n    <key name=\"CreateTestDialog.RecentsKey\">\n      <recent name=\"org.example\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"JUnit.NoviceTest.output_greeting\">\n    <configuration name=\"Expert\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.Expert\" />\n      <module name=\"aufgabeNovice\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"org.example.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Novice\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.Novice\" />\n      <module name=\"aufgabeNovice\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"org.example.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"NoviceTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"aufgabeNovice\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"org.example.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"org.example\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.NoviceTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"NoviceTest.output_greeting\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"aufgabeNovice\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"org.example.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"org.example\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.NoviceTest\" />\n      <option name=\"METHOD_NAME\" value=\"output_greeting\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"NoviceTest.output_name\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"aufgabeNovice\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"org.example.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"org.example\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.NoviceTest\" />\n      <option name=\"METHOD_NAME\" value=\"output_name\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.NoviceTest.output_greeting\" />\n        <item itemvalue=\"JUnit.NoviceTest.output_name\" />\n        <item itemvalue=\"Application.Expert\" />\n        <item itemvalue=\"JUnit.NoviceTest\" />\n        <item itemvalue=\"Application.Novice\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8e1105f1-41fc-4d5e-9b66-c9fb6edb21f4\" name=\"Changes\" comment=\"\" />\n      <created>1666796230881</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1666796230881</updated>\n      <workItem from=\"1666796232074\" duration=\"7156000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6ec17df4f6cdc5284bb7614f37351a43eaf3bafa)
++++ b/.idea/workspace.xml	(date 1666810414171)
+@@ -4,20 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8e1105f1-41fc-4d5e-9b66-c9fb6edb21f4" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++    <list default="true" id="8e1105f1-41fc-4d5e-9b66-c9fb6edb21f4" name="Changes" comment="initial Novice">
+       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Expert.java" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Intermediate.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Novice.java" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ExpertTest.java" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/src/test/java/org/example/IntermediateTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/NoviceTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -161,8 +152,16 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1666796230881</updated>
+-      <workItem from="1666796232074" duration="7156000" />
++      <workItem from="1666796232074" duration="7661000" />
++    </task>
++    <task id="LOCAL-00001" summary="initial Novice">
++      <created>1666810113536</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1666810113536</updated>
+     </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -179,4 +178,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="initial Novice" />
++    <option name="LAST_COMMIT_MESSAGE" value="initial Novice" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/org/example/Intermediate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Intermediate.java b/src/main/java/org/example/Intermediate.java
+new file mode 100644
+--- /dev/null	(date 1666807197714)
++++ b/src/main/java/org/example/Intermediate.java	(date 1666807197714)
+@@ -0,0 +1,57 @@
++package org.example;
++
++import java.util.Scanner;
++
++public class Intermediate {
++    public static void main(String[] args) {
++
++    }
++
++    //Fülle ein String-Array mit den Zahlenwörtern "Eins" bis "Zehn"
++    public static String[] zahlenwortArray(){
++        String[] arr = {"eins","zwei","drei","vier","fünf","sechs","sieben","acht","neun","zehn"};
++        return arr;
++    }
++
++    //Schreibe eine Methode die zu einer einstelligen Zahl das entsprechende Zahlenwort ausgibt.
++    public static String zahlenWort(int zahl){
++
++        return zahlenwortArray()[zahl-1];
++    }
++
++
++    //Schreibe ein Programm das die Zahlen 1-100 ausgibt, aber:
++    //Vor Zahlen die durch 3 teilbar sind (modulo) soll ein # stehen
++    //Vor Zahlen die durch 5 teilbar sind soll ein $ stehen
++    public static void Zahlliste(){
++        for (int i = 1; i <= 100; i++) {
++
++            if (i%15==0){
++                System.out.println("#$"+i);
++            }else if(i%3==0){
++                System.out.println("#"+i);
++            }else if(i%5==0){
++                System.out.println("$"+i);
++            }else{
++                System.out.println(i);
++            }
++        }
++    }
++    //Schreibe ein Programm die Wörter vom Benutzer einliest (Scanner) und diese in einem Array speichert.
++    //Gib vor jeder Eingabe jeweils die eingegebenen Wörter noch mal aus.
++    public static void wordList(){
++        Scanner sc = new Scanner(System.in);
++        StringBuilder sb = new StringBuilder();
++        int count =0;
++        while(true){
++            System.out.println("gebe was ein");
++            sb.append(" " + sc.next());
++            count++;
++            System.out.println(sb.toString());
++        }
++    }
++
++
++
++
++}
